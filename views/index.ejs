@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study App</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link type="text/css" rel="stylesheet" href="/public/output.css">
+    <link type="text/css" rel="stylesheet" href="/public/style.css">
+    <link type="text/css" rel="stylesheet" href="/public/scrollbar.css">
+</head>
+
+<body class="text-white">
+    <div class="main container flex w-full mx-auto px-2">
+
+        <div class="first w-[30%] mx-2">
+            <div class="library h-2/4">
+                <div class="lib-head font-bold">
+                    <h1>Library</h1>
+                </div>
+
+                <div
+                    class="lib-bdy bg-gray-800 bg-opacity-80 rounded-lg h-[81%] flex flex-col items-center justify-evenly">
+                    <div id="Lofi"
+                        class="album bg-blue-700 h-[28%] w-[90%] rounded-md flex p-1 items-center gap-5 hover:bg-blue-800 cursor-pointer">
+                        <img src="/assets/lofi.jpeg" alt="lofi" class="w-[100px]">
+                        <p class="text-xl">Lofi Beats</p>
+                    </div>
+
+                    <div id="focus"
+                        class="album bg-blue-700 h-[28%] w-[90%] rounded-md flex p-1 items-center gap-5 hover:bg-blue-800 cursor-pointer">
+                        <img src="/assets/focus.jpg" alt="focus" class="w-[100px] h-[56px]">
+                        <p class="text-xl">Deep Focus</p>
+                    </div>
+
+                    <div id="classic"
+                        class="album bg-blue-700 h-[28%] w-[90%] rounded-md  flex p-1 items-center gap-5 hover:bg-blue-800 cursor-pointer">
+                        <img src="/assets/classical.jpg" alt="classical" class="w-[100px] h-[56px]">
+                        <p class="text-xl">Classical Music</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music h-2/4">
+                <div class="music-head font-bold">
+                    <h1>Music</h1>
+                </div>
+
+                <div
+                    class="music-bdy bg-gray-800 bg-opacity-80 rounded-lg h-[81%] flex flex-col gap-2 py-2 items-center">
+                </div>
+            </div>
+        </div>
+
+        <div class="separate"></div>
+
+        <div class="second w-[39%] mx-2 flex flex-col">
+            <div class="todolist h-[88.2%] w-full">
+                <div class="todo-head font-bold text-center">
+                    <h1>Todo List</h1>
+                </div>
+
+                <div class="todo-bdy bg-gray-800 rounded-lg flex flex-col gap-3 items-center h-[90%]">
+                    <div class="input-box flex justify-center w-[100%] pt-2 gap-0.5 items-center h-[12%]">
+                        <input type="text" placeholder="Enter Task"
+                            class="add-task w-[85%] rounded-md bg-slate-700 p-2">
+                        <button class="add-btn flex items-center h-[80%] w-[6%]">
+                            <span class="material-symbols-outlined text-blue-700 text-3xl hover:text-blue-800">
+                                add
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="todo-list w-[100%] flex flex-col items-center gap-2 h-[88%]">
+                    </div>
+                </div>
+            </div>
+
+            <div class="playbox flex flex-col bg-blue-700 h-[10%] rounded-[7px] items-center justify-center gap-1">
+                <div class="playbar flex w-[90%]">
+                    <div class="song-nm w-[40%] flex justify-start">
+                    </div>
+
+                    <div class="play-btns flex w-[20%] justify-center">
+                        <button class="prev-btn flex items-center h-[24px] rounded-full hover:bg-blue-800">
+                            <span class="material-symbols-outlined">
+                                skip_previous
+                            </span>
+                        </button>
+                        <button class="play-btn flex items-center h-[24px] rounded-full hover:bg-blue-800"><span
+                                class="material-symbols-outlined">
+                                play_arrow
+                            </span></button>
+                        <button class="next-btn flex items-center h-[24px] rounded-full hover:bg-blue-800">
+                            <span class="material-symbols-outlined">
+                                skip_next
+                            </span>
+                        </button>
+                    </div>
+
+                    <div class="song-dur w-[40%] flex justify-end">
+                    </div>
+                </div>
+
+                <div class="seekbar w-[90%] h-[3.5px] bg-white rounded-md hover:cursor-pointer">
+                    <div class="seekbtn w-[10px] h-[10px] rounded-full bg-black relative 
+                        bottom-[3.3px] left-0"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="separate"></div>
+
+        <div class="third w-[30%] mx-2 flex flex-col items-center gap-4 relative">
+            <div class="pomo-head text-center font-bold">
+                <h1>Pomodoro Timer</h1>
+            </div>
+
+            <div class="pomo-btns flex w-[90%] justify-between mt-8">
+                <button class="pomo1 w-16 h-16 rounded-full bg-blue-700 hover:bg-blue-800">25</button>
+                <button class="pomo2 w-16 h-16 rounded-full bg-blue-700 hover:bg-blue-800">50</button>
+            </div>
+
+            <div
+                class="pomo-timer w-[65%] h-[41%] border-[6px] border-blue-600 rounded-full flex justify-center items-center">
+            </div>
+
+            <div class="pomo-text text-6xl absolute bottom-[45%]">00:00</div>
+
+            <div class="pomo-status mt-8 flex justify-center gap-2">
+                <button
+                    class="state text-l w-18 h-9 rounded-md bg-blue-700 hover:bg-blue-800 px-2 flex items-center">Pause</button>
+                <button
+                    class="reset text-l w-18 h-9 rounded-md bg-blue-700 hover:bg-blue-800 px-2 flex items-center">End</button>
+            </div>
+        </div>
+    </div>
+    <script src="/public/music.js" type="text/javascript"></script>
+    <script src="/public/todo.js" type="text/javascript"></script>
+    <script src="/public/pomo.js" type="text/javascript"></script>
+</body>
+
+</html>
