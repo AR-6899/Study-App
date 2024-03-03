@@ -1,15 +1,15 @@
 // console.log('Music script running');
-let album = document.getElementsByClassName('album');
-let music_bdy = document.querySelector('.music-bdy');
-let song_name = document.querySelector('.song-nm');
-let song_dur = document.querySelector('.song-dur');
+const album = document.getElementsByClassName('album');
+const music_bdy = document.querySelector('.music-bdy');
+const song_name = document.querySelector('.song-nm');
+const song_dur = document.querySelector('.song-dur');
 let songs = [];
 
-let prev_btn = document.querySelector('.prev-btn');
-let play_btn = document.querySelector('.play-btn');
-let next_btn = document.querySelector('.next-btn');
-let seek_btn = document.querySelector('.seekbtn');
-let seek_bar = document.querySelector('.seekbar');
+const prev_btn = document.querySelector('.prev-btn');
+const play_btn = document.querySelector('.play-btn');
+const next_btn = document.querySelector('.next-btn');
+const seek_btn = document.querySelector('.seekbtn');
+const seek_bar = document.querySelector('.seekbar');
 
 let currsong = new Audio();
 let state = false;
