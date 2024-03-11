@@ -17,14 +17,14 @@ const assignEvents = (task, checkbox, delete_btn) => {
     checkbox.addEventListener('click', async () => {
         let newVal = !task.isDone;
         let options = {
-            method: 'PUT',
+            method: 'PATCH',
             headers: {
                 'Content-type': 'application/json'
             },
             body: JSON.stringify(task)
         };
 
-        let p = await fetch(`/todo/update/${newVal}`, options);
+        let p = await fetch(`/todo/${newVal}`, options);
         let response = await p.json();
         console.log(response);
         todo_list.innerHTML = "";
@@ -40,7 +40,7 @@ const assignEvents = (task, checkbox, delete_btn) => {
             body: JSON.stringify(task)
         };
 
-        let p = await fetch(`/todo/delete`, options);
+        let p = await fetch(`/todo`, options);
         let response = await p.json();
         console.log(response);
         todo_list.innerHTML = "";
@@ -102,7 +102,7 @@ add_btn.addEventListener('click', async () => {
             body: JSON.stringify(task)
         };
 
-        let p = await fetch(`/todo/post`, options);
+        let p = await fetch(`/todo`, options);
         let response = await p.json();
         console.log(response);
         todo_list.innerHTML = "";
